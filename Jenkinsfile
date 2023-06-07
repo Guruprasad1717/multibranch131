@@ -1,21 +1,8 @@
-node('built-in') 
- {
- stage('continuous download') 
-   {
-    
-     git branch: 'main', url: 'https://github.com/ankitnarula28/awsmaven.git'
- 
-     }   
-
-stage('Continuous build') 
-
-{
-
 sh 'mvn package'
 
 }
 
-stage('Continuous Deployment') 
+stage('Continuous Deployment')
 
 {
 
@@ -23,12 +10,12 @@ sh 'scp  /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.w
 
 }
 
-stage('Continuous testing') 
+stage('Continuous testing')
 
 {
 
 sh 'echo "Testing Passed"'
 
 }
-
 }
+
