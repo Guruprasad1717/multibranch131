@@ -1,6 +1,6 @@
 sh 'mvn package'
 
-
+{
 
 stage('Continuous Deployment')
 
